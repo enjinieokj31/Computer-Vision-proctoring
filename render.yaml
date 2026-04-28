@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: yolo-backend
+    env: docker
+    rootDir: backend
+
+  - type: static
+    name: yolo-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
